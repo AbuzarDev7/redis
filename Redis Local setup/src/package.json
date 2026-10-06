@@ -1,0 +1,13 @@
+{
+  "name": "04-login-otp",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": " start run dev "
+  },
+  "dependencies": {
+    "express": "^4.18.3",
+    "ioredis": "^5.4.1"
+  }
+}
