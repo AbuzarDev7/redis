@@ -6,17 +6,10 @@ const app = express();
 
 const redis = new Redis(
     process.env.REDIS_URL || 'redis://localhost:6379',
-    {
-        maxRetriesPerRequest: 3,
-        retryStrategy(times) {
-            return Math.min(times * 100, 3000);
-        }
-    }
+    
 );
 
-redis.on('connect', () => {
-    console.log('Connected to Redis successfully');
-});
+
 
 redis.on('error', (err) => {
     console.error('Redis error:', err.message);
