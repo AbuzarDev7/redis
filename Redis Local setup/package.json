@@ -1,12 +1,15 @@
 {
   "name": "redis-local-setup",
-  "module": "src/index.js",
-  "type": "module",
+  "version": "1.0.0",
   "private": true,
-  "devDependencies": {
-    "@types/bun": "latest"
+  "type": "module",
+  "scripts": {
+    "dev": "node --watch src/index.js",
+    "start": "node src/index.js"
   },
-  "peerDependencies": {
-    "typescript": "^7"
+  "dependencies": {
+    "express": "^4.22.3",
+    "ioredis": "^5.11.1",
+    "mongoose": "^9.11.0"
   }
 }
